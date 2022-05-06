@@ -70,6 +70,7 @@
               type="submit"
               value="Generate Code"
               id="generateButton"
+              onclick="generateQR()"
               class="p-2 m-3 w-50 bg-secondary text-white rounded shadow-lg border-0"
             />
           </div>
@@ -89,5 +90,7 @@
         <div id="generatedCode"></div>
       </div>
     </div>
+    <script src="qr.js"></script>
+    <script src="qrcode.min.js"></script>
   </body>
 </html>
