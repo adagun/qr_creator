@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate QR Codes</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/de229919c5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="bg-dark text-white">
+    <div class="row shadow p-5">
+      <div class="d-flex justify-content-center shadow">
+        <div
+          class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-3 shadow text-center"
+        >
+          <i class="fa m-1 rounded p-2 bg-info fa-link" aria-hidden="true"></i>
+          <i
+            class="fa m-1 rounded p-2 bg-info fa-file-lines"
+            aria-hidden="true"
+          ></i>
+          <i class="fa m-1 rounded p-2 bg-info fa-phone" aria-hidden="true"></i>
+          <i
+            class="fa m-1 rounded p-2 bg-info fa-address-card"
+            aria-hidden="true"
+          ></i>
+          <i
+            class="fa m-1 rounded p-2 bg-info fa-envelope"
+            aria-hidden="true"
+          ></i>
+          <i
+            class="fa m-1 rounded p-2 fa-brands fa-android bg-info"
+            aria-hidden="true"
+          ></i>
+        </div>
+
+        <div
+          class="p-2 flex align-items-center flex-column justify-content-center"
+        >
+          <div id="formBlock" class="shadow p-2">
+            <textarea
+              name="inputText"
+              id="inputText"
+              cols="30"
+              rows="10"
+              class="form-control d-flex m-auto"
+            ></textarea>
+          </div>
+          <div class="d-flex justify-content-center ">
+            <input
+              type="submit"
+              value="Generate Code"
+              id="generateButton"
+              class="p-2 m-3 w-50 bg-secondary text-white rounded shadow-lg border-0"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-3 shadow">
+        <h2 class="text-center">Generated Code:</h2>
+        <div class="d-flex justify-content-end">
+          <i class="fas fa-copy m-1 rounded p-2 bg-info" aria-hidden="true"></i>
+          <i
+            class="fas fa-download m-1 rounded p-2 bg-info"
+            aria-hidden="true"
+          ></i>
+        </div>
+        <div class="p-2"></div>
+        <div id="generatedCode"></div>
+      </div>
+    </div>
+  </body>
+</html>
