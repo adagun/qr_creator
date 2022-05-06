@@ -29,35 +29,12 @@
   </head>
 
   <body class="bg-dark text-white">
-    <div class="row shadow p-5">
-      <div class="d-flex justify-content-center shadow">
-        <div
-          class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-3 shadow text-center"
-        >
-          <i class="fa m-1 rounded p-2 bg-info fa-link" aria-hidden="true"></i>
-          <i
-            class="fa m-1 rounded p-2 bg-info fa-file-lines"
-            aria-hidden="true"
-          ></i>
-          <i class="fa m-1 rounded p-2 bg-info fa-phone" aria-hidden="true"></i>
-          <i
-            class="fa m-1 rounded p-2 bg-info fa-address-card"
-            aria-hidden="true"
-          ></i>
-          <i
-            class="fa m-1 rounded p-2 bg-info fa-envelope"
-            aria-hidden="true"
-          ></i>
-          <i
-            class="fa m-1 rounded p-2 fa-brands fa-android bg-info"
-            aria-hidden="true"
-          ></i>
-        </div>
-
-        <div
-          class="p-2 flex align-items-center flex-column justify-content-center"
-        >
-          <div id="formBlock" class="shadow p-2">
+    <div class="container w-50 bg-secondary mb-3 " >
+      
+      <h1 class="text-center mt-5">QR Code Creator</h1>
+     
+        
+        <div id="formBlock" class="shadow p-2">
             <textarea
               name="inputText"
               id="inputText"
@@ -65,39 +42,44 @@
               rows="10"
               class="form-control d-flex m-auto"
             ></textarea>
-          </div>
+            
+         
           <div
             class="d-flex justify-content-center align-items-center flex-column"
           >
             <input
               type="submit"
-              value="Generate Code"
+              value="Create Code"
               id="generateButton"
               onclick="generateQR()"
-              class="p-2 m-3 w-50 bg-secondary text-white rounded shadow-lg border-0"
+              class="p-2 m-4 w-50 bg-info text-white rounded shadow-lg border-0"
             />
           </div>
-        </div>
+          </div>
+      
       </div>
 
-      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-3 shadow m-auto">
-        <h2 class="text-center">Generated Code:</h2>
+      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-3 shadow mx-auto mt-2 bg-secondary" id="result"
+      style="display: none;"
+      >
+        <h2 class="text-center">Your code</h2>
       
-        <div class="d-flex justify-content-end">
+        <div class="d-flex justify-content-center">
           <i 
-            class="fas fa-copy m-1 rounded p-2 bg-info"
+            class="fas fa-copy m-1 rounded p-2 bg-danger"
             onclick="copy()"
             aria-hidden="true"
           ></i>
           <i
-            class="fas fa-download m-1 rounded p-2 bg-info"
+            class="fas fa-download m-1 rounded p-2 bg-danger"
+            onclick="download()"
             aria-hidden="true"
           ></i>
         </div>
         <div class="p-2"></div>
         <div
           id="generatedCode"
-          class="d-flex justify-content-center align-items-center flex-column"
+          class="d-flex justify-content-center align-items-center flex-column mb-4"
         ></div>
       </div>
     </div>

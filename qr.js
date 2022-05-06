@@ -10,6 +10,9 @@ function generateQR() {
     colorLight: "#FFFFFF",
     correctLevel: QRCode.CorrectLevel.H,
   });
+
+  document.getElementById('result').style.display = "block";
+
 }
 
 function copy() {
@@ -31,4 +34,18 @@ function copy() {
  
    })
    myToast.showToast();
+}
+
+
+function download()
+{
+    var img = document.querySelector("#generatedCode").querySelector('img').src; 
+    var link = document.createElement('a');
+    link.download = "qrcode.png";
+    link.href=img;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    delete link;
+
 }
